@@ -86,7 +86,7 @@ npm start
 
 You should see:
 ```
-✅ Gemini chatbot backend running on http://localhost:5000
+backend running on http://localhost:5000
 ```
 
 **Terminal 2 — frontend:**
