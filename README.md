@@ -44,7 +44,7 @@ gemini-chatbot/
 ## 1. Clone and install
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/jyotipatthak/Gemini-Chatbot>
 cd gemini-chatbot
 ```
 
