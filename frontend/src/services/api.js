@@ -1,9 +1,6 @@
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL;
 
-/**
- * Create a brand-new chat session on the backend.
- * Returns { chatId }
- */
+
 export async function createNewChat() {
   const res = await fetch(`${API_BASE}/chat/new`, {
     method: 'POST',
@@ -17,10 +14,7 @@ export async function createNewChat() {
   return res.json();
 }
 
-/**
- * Send a text message to the bot for a given chatId.
- * Returns { reply }
- */
+
 export async function sendMessage(chatId, message) {
   const res = await fetch(`${API_BASE}/chat/${chatId}/message`, {
     method: 'POST',
@@ -36,10 +30,7 @@ export async function sendMessage(chatId, message) {
   return res.json();
 }
 
-/**
- * Upload a PDF/TXT document for a given chatId.
- * Returns { fileName, extractedPreview }
- */
+
 export async function uploadDocument(chatId, file) {
   const formData = new FormData();
   formData.append('document', file);
@@ -57,10 +48,7 @@ export async function uploadDocument(chatId, file) {
   return res.json();
 }
 
-/**
- * Upload a PNG/JPG image for a given chatId.
- * Returns { fileName, previewUrl }
- */
+
 export async function uploadImage(chatId, file) {
   const formData = new FormData();
   formData.append('image', file);

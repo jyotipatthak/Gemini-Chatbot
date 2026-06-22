@@ -27,10 +27,7 @@ function Home() {
           <span className="rail-brand-name">gemini chatbot</span>
         </div>
 
-        <div className="rail-section">
-          <span className="rail-label">session</span>
-          <span className="rail-value mono">{shortId}</span>
-        </div>
+       
 
         <div className="rail-section">
           <span className="rail-label">messages</span>
